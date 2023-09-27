@@ -1,14 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'sans'],
+      // Aqui, dentro de extend, adicione sua classe personalizada
+      extend: {
+        theme: {
+          extend: {
+            // Classe personalizada 'button-day'
+            
+          },
+        },
       },
-
     },
   },
   plugins: [],
