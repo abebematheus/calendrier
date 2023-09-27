@@ -3,14 +3,14 @@
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
+    "./index.html",
+
   ],
   theme: {
     extend: {
-      // Aqui, dentro de extend, adicione sua classe personalizada
       extend: {
         theme: {
           extend: {
-            // Classe personalizada 'button-day'
             
           },
         },
