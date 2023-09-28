@@ -7,38 +7,98 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-  <div class="min-h-screen flex flex-col items-center justify-center">
-    <h1 class="text-8xl font-bold text-zinc-900 mb-8">Calendrier</h1>
 
-    <div class="bg-white p-6 w-80% md:w-60% mx-auto rounded-xl shadow-2xl border-black/80 flex flex-wrap justify-center">
+
+
+  
+</head>
+<body class="white">
+
+
+  
+  <div class="min-h-screen flex flex-col items-center justify-center bg-neutral-100 dark:bg-stone-900 d">
+
+    
+    <h1 id="bye" class="text-9xl font-bold transition-opacity duration-1500 ease-in-out opacity-100 text-zinc-900/20 mb-8 tracking-tight inline font-extrabold from-[#000000] to-[#030303] bg-clip-text text-transparent bg-gradient-to-b dark:text-white">WELCOME TO YOUR</h1>
+    <h1 id="calendrier-title" class="text-8xl font-bold text-zinc-900/20 mb-8 tracking-tight inline font-extrabold text-transparent bg-clip-text dark:bg-gradient-to-t dark:from-cyan-600 dark:via-blue-500 dark:to-cyan-800 bg-gradient-to-b from-[#FF1CF7] to-[#b249f8]" >CALENDRIER</h1>
+
+    <div id="calendar-container" class="bg-white dark:bg-zinc-800 shadow-2xl p-6 w-80% md:w-60% mx-auto rounded-xl  flex flex-wrap justify-center border border-zinc-200/40">
       
       <div class="grid grid-cols-7 gap-0 text-center ">
-        <div class="day-name">Dom</div>
-        <div class="day-name">Seg</div>
-        <div class="day-name">Ter</div>
-        <div class="day-name">Qua</div>
-        <div class="day-name">Qui</div>
-        <div class="day-name">Sex</div>
-        <div class="day-name">Sáb</div>
+        <div class="text-zinc-700 dark:text-white">Dom</div>
+        <div class="text-zinc-700 dark:text-white">Seg</div>
+        <div class="text-zinc-700 dark:text-white">Ter</div>
+        <div class="text-zinc-700 dark:text-white">Qua</div>
+        <div class="text-zinc-700 dark:text-white">Qui</div>
+        <div class="text-zinc-700 dark:text-white">Sex</div>
+        <div class="text-zinc-700 dark:text-white">Sáb</div>
 
-        <!-- Adicione a classe "open-modal" para cada dia -->
-        <div class="border border-gray-300 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="27">27</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl hover:bg-zinc-300 hover:text-white text-zinc-300 " data-day="27">27</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl hover:bg-zinc-300 hover:text-white text-zinc-300 " data-day="28">28</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl hover:bg-zinc-300 hover:text-white text-zinc-300 " data-day="29">29</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl hover:bg-zinc-300 hover:text-white text-zinc-300 " data-day="30">30</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl hover:bg-zinc-300 hover:text-white text-zinc-300 " data-day="31">31</div>
 
-        <!-- Repita o padrão para os outros dias -->
-        <!-- <div class="border ... open-modal" data-day="28">28</div> -->
-        <!-- <div class="border ... open-modal" data-day="29">29</div> -->
-        <!-- ... -->
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="01">01</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="02">02</div>
+
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="03">03</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="04">04</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="05">05</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="06">06</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="07">07</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="08">08</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="09">09</div>
+
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="10">10</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="11">11</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="12">12</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="13">13</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="14">14</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="15">15</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="16">16</div>
+
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="17">17</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="18">18</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="19">19</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="20">20</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="21">21</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="22">22</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="23">23</div>
+
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="24">24</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="25">25</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="26">26</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="27">27</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="28">28</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="29">29</div>
+        <div class="border border-zinc-100 dark:border-zinc-800 text-zinc-700 dark:text-white rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:text-white cursor-pointer open-modal" data-day="30">30</div>
+
+    
       </div>
     </div>
+    <button id="dark-mode-toggle" class="bg-blue-500 text-white px-4 py-2 rounded-md">
+      Modo Escuro: Desligado
+    </button>
+    <script>
+      const calendrierTitle = document.getElementById('calendrier-title');
+      const calendarContainer = document.getElementById('calendar-container');
+  
+      // Adicionar um evento de clique ao título para mostrar o calendário
+      calendrierTitle.addEventListener('click', () => {
+        calendarContainer.style.display = 'block'; // Mostra o calendário
+      });
+  
+      // Você pode adicionar outro evento (por exemplo, um botão) para ocultar o calendário se necessário.
+    </script>
   </div>
 
+  
   <!-- Modal -->
-  <div id="modal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80% md:w-60% mx-auto mt-20 bg-white p-6 rounded-lg shadow-lg">
-    <p class="text-xl font-semibold mb-2">Lembretes para o Dia <span id="modal-day"></span></p>
+  <div id="modal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80% md:w-60% mx-auto mt-20 bg-white p-6 rounded-lg shadow-2xl">
+    <p class="text-xl font-semibold mb-2">Lembretes para o dia <span id="modal-day"></span></p>
     <ul id="reminder-list" class="list-inside list-disc text-base mb-4"></ul>
-    <input type="text" id="modal-input" class="w-full px-3 py-2 border border-gray-300 rounded-md mb-4" placeholder="Adicionar lembrete (máximo 30 caracteres)" maxlength="30">
+    <input type="text" id="modal-input" class="w-full px-3 py-2 border border-gray-300 rounded-md mb-4 " placeholder="Adicionar lembrete (máximo 30 caracteres)" maxlength="30">
     <button id="add-reminder" class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">Adicionar</button>
     <button id="close-modal" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 ml-4">Fechar</button>
   </div>
@@ -68,7 +128,7 @@
         reminders.forEach((reminder, index) => {
           const listItem = document.createElement('li');
           const timeStamp = new Date().toLocaleString();
-          listItem.textContent = `${reminder} (Adicionado em: ${timeStamp})`;
+          listItem.textContent = `${reminder} (${timeStamp})`;
           const deleteButton = document.createElement('button');
           deleteButton.textContent = 'Excluir';
           deleteButton.className = 'text-red-500 ml-2';
@@ -121,7 +181,7 @@
         if (modalInputValue.length <= 30) {
           const listItem = document.createElement('li');
           const timeStamp = new Date().toLocaleString();
-          listItem.textContent = `${modalInputValue} (Adicionado em: ${timeStamp})`;
+          listItem.textContent = `${modalInputValue} (${timeStamp})`;
           const deleteButton = document.createElement('button');
           deleteButton.textContent = 'Excluir';
           deleteButton.className = 'text-red-500 ml-2';
@@ -147,5 +207,50 @@
       }
     });
   </script>
+
+<script>
+  setTimeout(function() {
+    var bye = document.getElementById("bye");
+    bye.classList.add("opacity-0");
+  }, 5000); // 5000 milissegundos (5 segundos)
+</script>
+
+
+<script>
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  const body = document.body;
+
+  // Verifique o estado atual do modo escuro (usando localStorage)
+  const isDarkMode = localStorage.getItem("darkMode") === "enabled";
+
+  // Atualize o texto do botão com base no estado atual
+  darkModeToggle.textContent = isDarkMode ? "Modo Escuro: Ligado" : "Modo Escuro: Desligado";
+
+  // Defina a classe "dark" no corpo, se o modo escuro estiver ativado
+  if (isDarkMode) {
+    body.classList.add("dark");
+  }
+
+  // Função para alternar o modo escuro
+  function toggleDarkMode() {
+    if (body.classList.contains("dark")) {
+      // Desativar o modo escuro
+      body.classList.remove("dark");
+      localStorage.setItem("darkMode", "disabled");
+      darkModeToggle.textContent = "Modo Escuro: Desligado";
+    } else {
+      // Ativar o modo escuro
+      body.classList.add("dark");
+      localStorage.setItem("darkMode", "enabled");
+      darkModeToggle.textContent = "Modo Escuro: Ligado";
+    }
+  }
+
+  // Adicione um evento de clique ao botão para alternar o modo escuro
+  darkModeToggle.addEventListener("click", toggleDarkMode);
+</script>
+
+
 </body>
 </html>
+
