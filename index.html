@@ -82,22 +82,12 @@
     </button>
     
 
-    <script>
-      const calendrierTitle = document.getElementById('calendrier-title');
-      const calendarContainer = document.getElementById('calendar-container');
   
-      // Adicionar um evento de clique ao título para mostrar o calendário
-      calendrierTitle.addEventListener('click', () => {
-        calendarContainer.style.display = 'block'; // Mostra o calendário
-      });
-  
-      // Você pode adicionar outro evento (por exemplo, um botão) para ocultar o calendário se necessário.
-    </script>
   </div>
 
   
   <!-- Modal -->
-  <div id="modal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80% md:w-60% mx-auto mt-20 bg-neutral-100 p-6 rounded-lg shadow-2xl">
+  <div id="modal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80%  mx-auto mt-20 bg-neutral-100 p-6 rounded-lg shadow-2xl">
     <p class="text-xl  font-semibold mb-2">Lembretes para o dia <span id="modal-day"></span></p>
     <ul id="reminder-list" class="list-inside list-disc text-base mb-4"></ul>
     <input type="text" id="modal-input" class="w-full px-3 py-2 border bg-neutral-100  border-gray-300 rounded-md mb-4 " placeholder="Adicionar lembrete (máximo 30 caracteres)" maxlength="30">
@@ -203,7 +193,7 @@
           reminders.push(modalInputValue);
           localStorage.setItem(`reminders-for-day-${currentDay}`, JSON.stringify(reminders));
 
-          modalInput.value = ''; // Limpe o input após adicionar
+          modalInput.value = ''; // Limpe o input após adicionar para não duplicar
         } else {
           alert('O lembrete não pode ter mais de 30 caracteres.');
         }
@@ -216,7 +206,7 @@
 <script>
   setTimeout(function() {
     var bye = document.getElementById("bye");
-    bye.classList.remove("opacity-100"); // Remova a classe "opacity-100"
+    bye.classList.remove("opacity-100"); // Remover welcome"
     bye.classList.add("opacity-0"); // Adicione a classe "opacity-0" para ocultar o elemento
   }, 5000); // 5000 milissegundos (5 segundos)
 </script>
