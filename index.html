@@ -1,33 +1,40 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Calendrier</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-kvA2SknwZ9I23z73+Nq6Gqb4l52Pzr/6xjwrj3or2PmI+B4d9faSp7ipsh7xjDpgp" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-
-
-
-
-  
+  <link rel="stylesheet" href="src/styles.css">
 </head>
-<body class="white">
-
-
+<body>
   
+
+    <!-- Centralização e cores de fundo  -->
   <div class="min-h-screen flex flex-col items-center justify-center bg-neutral-100 dark:bg-stone-900 d">
 
+      <!-- Frase de bem vindo -->
+    <h1 id="bye" class="text-9xl font-bold transition-opacity duration-1500 ease-in-out opacity-100 text-zinc-900/20 mb-2 tracking-tight inline font-extrabold from-[#000000] to-[#030303] bg-clip-text text-transparent bg-gradient-to-b dark:text-white">WELCOME TO YOUR</h1>
     
-    <h1 id="bye" class="text-9xl font-bold transition-opacity duration-1500 ease-in-out opacity-100 text-zinc-900/20 mb-8 tracking-tight inline font-extrabold from-[#000000] to-[#030303] bg-clip-text text-transparent bg-gradient-to-b dark:text-white">WELCOME TO YOUR</h1>
+    <!-- Titulo do calendario, noemado de Calendrier -->
     <h1 id="calendrier-title" class="text-8xl font-bold text-zinc-900/20 mb-8 tracking-tight inline font-extrabold text-transparent bg-clip-text dark:bg-gradient-to-t dark:from-cyan-600 dark:via-blue-500 dark:to-cyan-800 bg-gradient-to-b from-[#FF1CF7] to-[#b249f8]" >CALENDRIER</h1>
+  
+        <!-- Mes atual -->
+    <h1  class="text-2xl tracking-tight inline font-extrabold dark:text-neutral-300 text-zinc-600 " >Setembro</h1>
+ 
 
+    <!-- container do calendario -->
     <div id="calendar-container" class="bg-white dark:bg-zinc-800 shadow-2xl p-6 w-80% md:w-60% mx-auto rounded-xl  flex flex-wrap justify-center border border-zinc-200/40">
-      
+
+
+        <!-- Grid -->
       <div class="grid grid-cols-7 gap-0 text-center ">
+
+          <!-- Dias da semana -->
+
         <div class="text-zinc-700 dark:text-white">Dom</div>
         <div class="text-zinc-700 dark:text-white">Seg</div>
         <div class="text-zinc-700 dark:text-white">Ter</div>
@@ -36,12 +43,15 @@
         <div class="text-zinc-700 dark:text-white">Sex</div>
         <div class="text-zinc-700 dark:text-white">Sáb</div>
 
+          <!-- Dias do mês passado -->
         <div class="border border-zinc-100 dark:border-zinc-800 dark:text-zinc-600 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl hover:bg-zinc-300 hover:text-white text-zinc-300 " data-day="27">27</div>
         <div class="border border-zinc-100 dark:border-zinc-800 dark:text-zinc-600 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl hover:bg-zinc-300 hover:text-white text-zinc-300 " data-day="28">28</div>
         <div class="border border-zinc-100 dark:border-zinc-800 dark:text-zinc-600 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl hover:bg-zinc-300 hover:text-white text-zinc-300 " data-day="29">29</div>
         <div class="border border-zinc-100 dark:border-zinc-800 dark:text-zinc-600 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl hover:bg-zinc-300 hover:text-white text-zinc-300 " data-day="30">30</div>
         <div class="border border-zinc-100 dark:border-zinc-800 dark:text-zinc-600 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl hover:bg-zinc-300 hover:text-white text-zinc-300 " data-day="31">31</div>
 
+
+          <!-- Dias do mês atual, não é a melhor forma, porém foi a que consegui para cumprir o escopo -->
         <div class="border border-zinc-100 text-zinc-700 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-400 to-pink-600 hover:text-white cursor-pointer open-modal dark:border-zinc-800 dark:text-white dark:hover:bg-gradient-to-r dark:from-sky-400 dark:to-blue-500" data-day="01">01</div>        
         <div class="border border-zinc-100 text-zinc-700 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-400 to-pink-600 hover:text-white cursor-pointer open-modal dark:border-zinc-800 dark:text-white dark:hover:bg-gradient-to-r dark:from-sky-400 dark:to-blue-500" data-day="02">02</div>     
         <div class="border border-zinc-100 text-zinc-700 rounded-full h-16 w-16 flex items-center justify-center transition duration-300 font-bold text-2xl transform hover:scale-110 hover:bg-gradient-to-r from-pink-400 to-pink-600 hover:text-white cursor-pointer open-modal dark:border-zinc-800 dark:text-white dark:hover:bg-gradient-to-r dark:from-sky-400 dark:to-blue-500" data-day="03">03</div>           
@@ -75,32 +85,36 @@
 
     
       </div>
-    </div>
 
+      <!-- Botão do Dark mode que troca de icone -->
+
+    </div>
     <button id="dark-mode-toggle" class="text-white px-4 py-2 rounded-md">
       <img id="light-mode-icon" src="https://www.shareicon.net/download/2015/08/04/80066_moon.ico" alt="Ícone do modo claro" style="width: 24px; height: 24px;">
       <img id="dark-mode-icon" src="https://static-00.iconduck.com/assets.00/display-brightness-symbolic-icon-256x256-5x1nclat.png" alt="Ícone do modo escuro" style="width: 24px; height: 24px; display: none;">
     </button>
-    
-
-  
   </div>
 
   
-  <!-- Modal -->
+  <!-- Modal de Lembretes e sua ações -->
+
   <div id="modal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80%  mx-auto mt-20 bg-neutral-100 p-6 rounded-lg shadow-2xl">
-    <p class="text-xl  font-semibold mb-2">Lembretes para o dia <span id="modal-day"></span></p>
+    <p class="text-xl  font-semibold mb-2">Lembretes para o dia <span id="modal-day"></span></p>     <!-- Titulo de cada modal, diferente para cada  -->
+
+
     <ul id="reminder-list" class="list-inside list-disc text-base mb-4"></ul>
-    <input type="text" id="modal-input" class="w-full px-3 py-2 border bg-neutral-100  border-gray-300 rounded-md mb-4 " placeholder="Adicionar lembrete (máximo 30 caracteres)" maxlength="30">
-    <div class="flex justify-between"> <!-- Use uma div para alinhar os botões -->
-      <button id="add-reminder" class="px-4 mr-20 py-2 bg-gradient-to-r from-pink-400 to-pink-600 dark:bg-gradient-to-r dark:from-sky-400 dark:to-blue-500 text-white rounded-md hover:bg-fuchsia-800 dark:hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-opacity-50">Adicionar</button>
-      <button id="close-modal" class="px-4 ml-20 py-2 bg-gradient-to-r from-orange-600 to-orange-500 text-white rounded-md  focus:outline-none focus:ring-2 focus:ring-opacity-50 ml-4">Fechar</button>
+    <input type="text" id="modal-input" class="w-full px-3 py-2 border bg-neutral-100  border-gray-300 rounded-md mb-4 " placeholder="Adicionar lembrete (máximo 30 caracteres)" maxlength="30">   <!-- Input com limite de 30 caracteres -->
+
+    <div class="flex justify-between"> <!-- Div para alinhar botoes -->
+      <button id="add-reminder" class="px-4 mr-20 py-2 bg-gradient-to-r from-pink-400 to-pink-600 dark:bg-gradient-to-r dark:from-sky-400 dark:to-blue-500 text-white rounded-md hover:bg-fuchsia-800 dark:hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-opacity-50">Adicionar</button>   <!-- Botão de Adicionar lembretes -->
+
+      <button id="close-modal" class="px-4 ml-20 py-2 bg-gradient-to-r from-orange-600 to-orange-500 text-white rounded-md  focus:outline-none focus:ring-2 focus:ring-opacity-50 ml-4">Fechar</button>      <!-- Botão de Excluir lembretes -->
+
     </div>
   </div>
   
-
+  <!-- Variavel para alterar os dias-->
   <script>
-    // Variável para armazenar o dia atual
     let currentDay = null;
 
     // Função para abrir o modal
@@ -142,13 +156,13 @@
       modal.style.display = 'block';
     }
 
-    // Função para fechar o modal
+    // Function para fechar o modal 
     function closeModal() {
       const modal = document.getElementById('modal');
       modal.style.display = 'none';
     }
 
-    // Evento de clique nos botões para abrir o modal
+    // Evento de click nos botões para abrir o modal 
     const openModalButtons = document.querySelectorAll('.open-modal');
     openModalButtons.forEach((button) => {
       button.addEventListener('click', () => {
@@ -157,62 +171,62 @@
       });
     });
 
-    // Evento de clique no botão para fechar o modal
+    // Evento de click no botão para fechar o modal
     const closeModalButton = document.getElementById('close-modal');
     closeModalButton.addEventListener('click', () => {
       closeModal();
     });
 
-    // Evento para permitir a edição do texto da modal
+    // 1 Evento para permitir a edição do texto da modal
     const modalInput = document.getElementById('modal-input');
     modalInput.addEventListener('click', () => {
-      modalInput.readOnly = false;
+      modalInput.readOnly = false;  // Permite edição do campo da modal quando clicado
     });
 
-    // Evento para adicionar lembrete
+    // 2 Evento para adicionar lembrete
     const addReminderButton = document.getElementById('add-reminder');
-    addReminderButton.addEventListener('click', () => {
-      const modalInputValue = modalInput.value;
-      if (modalInputValue.trim() !== '') {
-        if (modalInputValue.length <= 30) {
-          const listItem = document.createElement('li');
-          const timeStamp = new Date().toLocaleString();
-          listItem.textContent = `${modalInputValue} (${timeStamp})`;
-          const deleteButton = document.createElement('button');
-          deleteButton.textContent = 'Excluir';
-          deleteButton.className = 'text-red-500 ml-2';
-          deleteButton.addEventListener('click', () => {
-            listItem.remove();
-          });
-          listItem.appendChild(deleteButton);
-          const reminderList = document.getElementById('reminder-list');
-          reminderList.appendChild(listItem);
+addReminderButton.addEventListener('click', () => {
+  const modalInputValue = modalInput.value; // Obtém o valor do campo de entrada da modal
+  if (modalInputValue.trim() !== '') { // Verifica se o valor não está em branco
+    if (modalInputValue.length <= 30) { // Verifica se o valor tem no máximo 30 caracteres
+      const listItem = document.createElement('li'); 
+      const timeStamp = new Date().toLocaleString(); // Obtém a data e hora atual
+      listItem.textContent = `${modalInputValue} (${timeStamp})`; 
+      const deleteButton = document.createElement('button'); // 
+      deleteButton.textContent = 'Excluir'; // Define o texto do botão
+      deleteButton.className = 'text-red-500 ml-2'; // Estilização
+      deleteButton.addEventListener('click', () => {
+        listItem.remove(); // Remove o lembrete quando o botão "Excluir" é clicado
+      });
+      listItem.appendChild(deleteButton); // Adiciona o botão "Excluir" ao elemento de lista
+      const reminderList = document.getElementById('reminder-list'); // Obtém a lista de lembretes
+      reminderList.appendChild(listItem); // Adiciona o elemento de lista
 
-          // Salve a lista de lembretes no localStorage
-          const savedData = localStorage.getItem(`reminders-for-day-${currentDay}`);
-          const reminders = savedData ? JSON.parse(savedData) : [];
-          reminders.push(modalInputValue);
-          localStorage.setItem(`reminders-for-day-${currentDay}`, JSON.stringify(reminders));
-
-          modalInput.value = ''; // Limpe o input após adicionar para não duplicar
-        } else {
-          alert('O lembrete não pode ter mais de 30 caracteres.');
-        }
-      } else {
-        alert('Digite um lembrete válido.');
-      }
+      // Salva a lista de lembretes no localStorage para não precisar de um DB
+      const savedData = localStorage.getItem(`reminders-for-day-${currentDay}`); // Obtém os lembretes salvos anteriormente
+      const reminders = savedData ? JSON.parse(savedData) : []; // Converte os dados emarray
+      reminders.push(modalInputValue); // Adiciona o novo lembrete no array
+      localStorage.setItem(`reminders-for-day-${currentDay}`, JSON.stringify(reminders)); //salva o array no localStorage
+      modalInput.value = ''; // Limpa o campo de entrada após adicionar o lembrete para evitar bug de duplicatas
+    } else {
+      alert('O lembrete não pode ter mais de 30 caracteres.'); // Exibe um alerta se o lembrete for maior do que o configurado
+    }
+  } else {
+    alert('Digite um lembrete válido.'); // Exibe um alerta se o lembrete estiver vazio
+  }
     });
   </script>
 
+  <!-- Animação do Welcome -->
 <script>
   setTimeout(function() {
     var bye = document.getElementById("bye");
-    bye.classList.remove("opacity-100"); // Remover welcome"
-    bye.classList.add("opacity-0"); // Adicione a classe "opacity-0" para ocultar o elemento
+    bye.classList.remove("opacity-100"); // Animação para remover welcome"
+    bye.classList.add("opacity-0"); // Adicione a classe "opacity-0" para ocultar o elemento e remover da tela
   }, 5000); // 5000 milissegundos (5 segundos)
 </script>
 
-
+  <!-- Ação de ativar e desativar o modo Dark por botão, tambem funciona em Mac alterando o theme na configuração do dispositivo -->
 <script>
   const darkModeToggle = document.getElementById("dark-mode-toggle");
 const lightModeIcon = document.getElementById("light-mode-icon");
@@ -225,27 +239,27 @@ const isDarkMode = localStorage.getItem("darkMode") === "enabled";
 // Defina a classe "dark" no corpo, se o modo escuro estiver ativado
 if (isDarkMode) {
   body.classList.add("dark");
-  // Mostre a imagem do modo escuro
+  // Mostre o icon no dark mode
   darkModeIcon.style.display = "inline";
-  // Oculte a imagem do modo claro
+  // Oculta o icon no lightmode
   lightModeIcon.style.display = "none";
 } else {
-  // Mostre a imagem do modo claro
+  // Mostra o icon no light mode
   lightModeIcon.style.display = "inline";
-  // Oculte a imagem do modo escuro
+  // Esconde o icon no dark mode
   darkModeIcon.style.display = "none";
 }
 
-// Função para alternar o modo escuro
+// Function para alternar o modo de exibição entre light e dark, sem precisar fazer manualmente nas conf.
 function toggleDarkMode() {
   if (body.classList.contains("dark")) {
-    // Desativar o modo escuro
+    // Desativar o dark mode
     body.classList.remove("dark");
     localStorage.setItem("darkMode", "disabled");
     darkModeIcon.style.display = "none";
     lightModeIcon.style.display = "inline";
   } else {
-    // Ativar o modo escuro
+    // Ativar o dark mode
     body.classList.add("dark");
     localStorage.setItem("darkMode", "enabled");
     darkModeIcon.style.display = "inline";
@@ -262,4 +276,3 @@ darkModeToggle.addEventListener("click", toggleDarkMode);
 
 </body>
 </html>
-
